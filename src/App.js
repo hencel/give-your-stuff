@@ -1,39 +1,26 @@
 import React, {Component} from 'react';
 import './App.css';
+import Header from './Header';
+import StatsInfo from './StatsInfo';
+import FourStepsInfo from './FourStepsInfo';
+import AboutUs from './AboutUs';
+import ChantriesList from './ChantriesList';
+import Contact from './Contact';
+
 
 class App extends Component {
   render() {
     return (
-      <React.Component>
+      <React.Fragment>
         <Header />
         <StatsInfo />
         <FourStepsInfo />
         <AboutUs />
         <ChantriesList />
         <Contact />
-      </React.Component>
+      </React.Fragment>
     )
   }
 }
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
 
 export default App;

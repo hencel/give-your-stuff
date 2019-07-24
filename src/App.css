@@ -1,33 +1,63 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+header {
+  width: 100%;
+  background-color: white;
+  display: flex;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.headerImages {
+  width: 50%;
+}
+.headerContent {
+  width: 50%;
+}
+.logingBar {
+  display: flex;
+  width: 100%;
+  align-content: flex-end;
+  /* flex-direction: row; */
+  justify-content: center; 
+}
+.signIn {
+  /* padding-left: 20px; */
+}
+.register {
+  border: 1px solid grey;
+}
+.blockBar {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+.navBar li {
+  padding-right: 2%;
+}
+.StatsInfo {
+  height: 200px;
+  background-color: yellow;
+}
+.FourStepsInfo {
+  height: 200px;
+  background-color: green;
+}
+.AboutUs {
+  height: 200px;
+  background-color: yellow;
+}
+.ChantriesList {
+  height: 200px;
+  background-color: green;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Contact {
+  height: 200px;
+  background-color: yellow;
 }
