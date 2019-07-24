@@ -34,7 +34,7 @@ header {
 .navBar {
   width: 100%;
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   list-style: none;
 }
 .navBar li {
