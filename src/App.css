@@ -4,8 +4,41 @@
   font-family: 'Open Sans', sans-serif;
 }
 header {
-  height: 200px;
-  background-color: green;
+  width: 100%;
+  background-color: white;
+  display: flex;
+}
+.headerImages {
+  width: 50%;
+}
+.headerContent {
+  width: 50%;
+}
+.logingBar {
+  display: flex;
+  width: 100%;
+  align-content: flex-end;
+  /* flex-direction: row; */
+  justify-content: center; 
+}
+.signIn {
+  /* padding-left: 20px; */
+}
+.register {
+  border: 1px solid grey;
+}
+.blockBar {
+  display: flex;
+  flex-direction: column;
+}
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  list-style: none;
+}
+.navBar li {
+  padding-right: 2%;
 }
 .StatsInfo {
   height: 200px;
