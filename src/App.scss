@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+header {
+  width: 100%;
+  background-color: white;
+  display: flex;
+
+  .headerImages {
+    width: 50%;
+  }
+  .logingBar {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5% 0;
+    list-style: none;
+    font-size: 0.8em;
+    li {
+      margin-left: 2%;
+      padding: 1%;
+      &:nth-child(2) {
+        border: 2px solid rgb(170, 166, 166);
+      }
+    }
+  }
+  nav {
+    display: block;
+    width: 50%;
+    padding-right: 20%;
+    max-height: 20vh;
+    position: relative;
+    .navBar {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+  
+      li {
+        padding-left: 2%;
+      }
+    }
+  }
+  .headerContent {
+    position: absolute;
+    bottom: 30%;
+    right: 20%;
+    font-size: 1.5em;
+    text-align: center;
+    img {
+      padding: 3% 0 5% 0;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      li {
+        flex-direction: row;
+        border: 2px solid rgb(170, 166, 166);
+        margin: 4%;
+        padding: 2%;
+      }
+    }
+  }
+}
+
+
+
+
+.StatsInfo {
+  height: 200px;
+  background-color: yellow;
+}
+.FourStepsInfo {
+  height: 200px;
+  background-color: green;
+}
+.AboutUs {
+  height: 200px;
+  background-color: yellow;
+}
+.ChantriesList {
+  height: 200px;
+  background-color: green;
+}
+
+.Contact {
+  height: 200px;
+  background-color: yellow;
+}
