@@ -7,7 +7,10 @@ header {
   width: 100%;
   background-color: white;
   display: flex;
-
+  color: rgb(65, 60, 60);
+  .active {
+    border: 2px solid rgb(170, 166, 166);
+  }
   .headerImages {
     width: 50%;
   }
@@ -44,8 +47,8 @@ header {
   .headerContent {
     position: absolute;
     bottom: 30%;
-    right: 20%;
-    font-size: 1.5em;
+    right: 15%;
+    font-size: 1.7em;
     text-align: center;
     img {
       padding: 3% 0 5% 0;
@@ -64,12 +67,30 @@ header {
   }
 }
 
-
-
-
 .StatsInfo {
-  height: 200px;
-  background-color: yellow;
+  height: 463px;
+  background: url(./images/Bg.jpg);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  .smallBox {
+    color: rgb(65, 60, 60);
+    // text-align: center;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    :nth-child(1) {
+      font-size: 4em;
+    }
+    :nth-child(3) {
+      text-align: center;
+      width: 70%;
+    }
+    
+  }
 }
 .FourStepsInfo {
   height: 200px;
