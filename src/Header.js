@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
+import { Link} from 'react-scroll';
 import header_start_img from './images/header_start_img.jpg';
 import decoration from './images/decoration.png';
-
+const options = {
+  activeClass: "active", 
+  smooth: true, 
+  duration: 500
+}
 
 class Header extends Component {
   render() {
     return (
-      <React.Fragment>
         <header>
           <div className={'headerImages'}>
             <img src={header_start_img} alt={'Packed staff'} />
@@ -18,10 +22,10 @@ class Header extends Component {
           </ul>
           <ul className={'navBar'}>
             <li>Start</li>
-            <li>O co chodzi?</li>
-            <li>O nas</li>
-            <li>Fundacje i organizacje</li>
-            <li>Kontakt</li>
+            <li><Link to="StatsInfo" {...options}>O co chodzi?</Link></li>
+            <li><Link to="AboutUs" {...options}>O nas</Link></li>
+            <li><Link to="ChantriesList" {...options}>OFundacje i organizacje</Link></li>
+            <li><Link to="Contact" {...options}>OKontakt</Link></li>
           </ul>
         </nav>
         
@@ -34,9 +38,7 @@ class Header extends Component {
             <li>ZORGANIZUJ ZBIÓRKĘ</li>
           </ul>
         </div>
-        </header>
-      </React.Fragment>
-     
+      </header>
     )
   }
 }
