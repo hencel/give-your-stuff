@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import decoration from './images/decoration.png';
-import about from './images/about.png';
+import about from './images/about.jpg';
 import signature from './images/signature.png';
 
 
