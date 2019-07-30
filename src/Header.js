@@ -24,7 +24,7 @@ class Header extends Component {
             <li>Start</li>
             <li><Link to="StatsInfo" {...options}>O co chodzi?</Link></li>
             <li><Link to="AboutUs" {...options}>O nas</Link></li>
-            <li><Link to="ChantriesList" {...options}>OFundacje i organizacje</Link></li>
+            <li><Link to="ChantriesList" {...options}>Fundacje i organizacje</Link></li>
             <li><Link to="Contact" {...options}>OKontakt</Link></li>
           </ul>
         </nav>
