@@ -2,14 +2,14 @@
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  color: rgb(65, 60, 60);
 }
 header {
   width: 100%;
   background-color: white;
   display: flex;
-  color: rgb(65, 60, 60);
   .active {
-    border: 2px solid rgb(170, 166, 166);
+    border: 1px solid rgb(65, 60, 60);
   }
   .headerImages {
     width: 50%;
@@ -24,7 +24,7 @@ header {
       margin-left: 2%;
       padding: 1%;
       &:nth-child(2) {
-        border: 2px solid rgb(170, 166, 166);
+        border: 1px solid rgb(65, 60, 60);
       }
     }
   }
@@ -59,7 +59,7 @@ header {
       list-style: none;
       li {
         flex-direction: row;
-        border: 2px solid rgb(170, 166, 166);
+        border: 2px solid rgb(65, 60, 60);
         margin: 4%;
         padding: 2%;
       }
@@ -76,7 +76,6 @@ header {
   flex-direction: row;
   .smallBox {
     color: rgb(65, 60, 60);
-    // text-align: center;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -93,8 +92,50 @@ header {
   }
 }
 .FourStepsInfo {
-  height: 200px;
-  background-color: green;
+  background-color: white;
+  .FourStepsInfoPanel {
+    padding: 7%;
+    text-align: center;
+    font-size: 2em;
+    img {
+      margin: 2% 0;
+    }
+    .FourStepsTinyBoxes {
+      background-color: rgb(214, 214, 214);
+      font-size: 0.8em;
+      margin: auto;
+      padding: 4% 4%;
+      width: 90%;
+      display: flex;
+      justify-content: space-around;
+      text-align: center;
+      & > div {
+        max-width: 15%;
+      }
+      .bottomBorder {
+        display: block;
+        margin: auto;
+        padding: 2%;
+        text-align: center;
+        border-bottom: 2px solid rgb(65, 60, 60);
+        width: 80%;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+    button {
+      border: 1px solid rgb(65, 60, 60);
+      background-color: white;
+      color: rgb(65, 60, 60);
+      margin: 4% 0 0 0;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  }
+  
 }
 .AboutUs {
   height: 200px;
