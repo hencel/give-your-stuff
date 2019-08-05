@@ -1,9 +1,43 @@
 import React, {Component} from 'react';
 import decoration from './images/decoration.png';
-import fb from './images/fb.png';
-import insta from './images/insta.png';
 
 class Contact extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      name: '',
+      nameError: '',
+      email: '',
+      emailError: '',
+      message: '',
+      messageError: ''
+    }
+  }
+  handlerChange = event => {
+    this.setState( {
+      [event.target.name]: event.target.value
+    })
+  }
+  handleSubmit = event => {
+    event.preventDefault();
+
+    if(this.state.name.length === 0) {
+      this.setState({
+        nameError: "Name cannot be empty!"
+      })
+    }
+
+    if(this.state.email.length === 0 && !this.state.email.includes('@')) {
+      this.setState({
+        emailError: "Email address it is not valid!"
+      })
+    }
+    if(this.state.message.length === 0) {
+      this.setState({
+        messageError: "Message cannot be empty!"
+      })
+    }
+  }  
   render() {
     return (
       <section className={'Contact'}>
@@ -14,20 +48,21 @@ class Contact extends Component {
             <form>
               <legend>FORMULARZ KONTAKTOWY</legend>
               <ul>
-                <li><input placeholder={'Imię'}></input></li>
-                <li><input placeholder={'Email'}></input></li>
+                <li>
+                  {this.state.nameError ? <p style={{color: 'red'}}>{this.state.nameError}</p> : null}
+                  <input type='text' name='name' value={this.state.name} onChange={this.handlerChange} required placeholder={'Imię'}></input></li>
+                <li>
+                  {this.state.emailError ? <p style={{color: 'red'}}>{this.state.emailError}</p> : null}
+                  <input type='text' name='email' value={this.state.email} onChange={this.handlerChange} required placeholder={'Email'}></input></li>
               </ul>
-              <input placeholder={'Wiadomość'}></input>
-              <button>Wyślij</button>
+              {this.state.messageError ? <p style={{color: 'red'}}>{this.state.emailError}</p> : null}
+              <input className={'message'} type='text' name='message' value={this.state.message} onChange={this.handlerChange} required placeholder={'Wiadomość'}></input>
+              <input className={'sendButton'} type="submit" value="Wyślij" />
             </form>
           </div>
         </div>
         <footer>
           <div>Copyright 2019 {'\u00A9'} by Zbigniew Piernik</div>
-          <div className={'socialLogos'}>
-            <img src={fb} alt={'Facebook logo'}/>
-            <img src={insta} alt={'Instagram logo'}/>
-          </div>
         </footer>
       </section>
     )
