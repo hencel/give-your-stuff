@@ -158,11 +158,7 @@ header {
         right: 0;
       }
     }
-    
-    // .allPeople {
-    //   width: 50%;
-    //   padding: 2% 0;
-    // }
+
   }
   :nth-child(2) {
     width: 50%;
@@ -175,6 +171,64 @@ header {
 }
 
 .Contact {
-  height: 200px;
-  background-color: yellow;
+  height: 100vh;
+  background: url('./images/form-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  .ContactContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    div {
+      margin-right: 10%;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 5vh;
+      position: relative;
+      p {
+        font-size: 2em;
+        padding-bottom: 10%;
+      }
+      img {
+        padding-bottom: 10%;
+      }
+      form {
+        width: 140%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        legend {
+          margin-bottom: 10%;
+        }
+        input {
+          background: none;
+          border: none;
+          border-bottom: 1px solid rgb(65, 60, 60);
+          margin-bottom: 10%;
+        }
+        .sendButton {
+          width: 30%;
+          margin: auto;
+          border: 1px solid rgb(65, 60, 60);
+        }
+      }
+      ul  {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    footer {
+      width: 100%;
+      height: 5vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+    }
+  }
 }
