@@ -1,32 +1,19 @@
 import React, {Component} from 'react';
-import { Link} from 'react-scroll';
+import LogingPanel from './LogingPanel';
+import MenuPanel from './MenuPanel';
 import header_start_img from './images/header_start_img.jpg';
 import decoration from './images/decoration.png';
-const options = {
-  activeClass: "active", 
-  smooth: true, 
-  duration: 500
-}
 
 class Header extends Component {
   render() {
     return (
-        <header>
-          <div className={'headerImages'}>
-            <img src={header_start_img} alt={'Packed staff'} />
-          </div>
-          <nav>
-          <ul className={'logingBar'}>
-            <li>Zaloguj</li>
-            <li>Załóż konto</li>
-          </ul>
-          <ul className={'navBar'}>
-            <li>Start</li>
-            <li><Link to="StatsInfo" {...options}>O co chodzi?</Link></li>
-            <li><Link to="AboutUs" {...options}>O nas</Link></li>
-            <li><Link to="ChantriesList" {...options}>Fundacje i organizacje</Link></li>
-            <li><Link to="Contact" {...options}>OKontakt</Link></li>
-          </ul>
+      <header>
+        <div className={'headerImages'}>
+          <img src={header_start_img} alt={'Packed staff'} />
+        </div>
+        <nav>
+          <LogingPanel />
+          <MenuPanel />
         </nav>
         
         <div className={'headerContent'}>
