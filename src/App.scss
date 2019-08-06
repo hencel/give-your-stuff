@@ -163,14 +163,60 @@ header {
     }
 
   }
-  :nth-child(2) {
 
-   
-  }
 }
 .ChantriesList {
-  height: 200px;
-  background-color: green;
+  .chantriesListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    p:nth-child(1) {
+      font-size: 2em;
+      padding: 2%;
+    }
+    p:nth-child(4) {
+      width: 40%;
+      text-align: center;
+      padding-bottom: 2%;
+    }
+    img {
+      padding-bottom: 2%;
+    }
+  }
+  .chantriesListSmallBoxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    width: 40%;
+    padding-bottom: 2%;
+    li {
+      width: 20%;
+      height: 50px;
+      margin: auto;
+      border-top: 1px solid rgb(65, 60, 60);
+      border-right: 1px solid rgb(65, 60, 60);
+      border-bottom: 1px solid rgb(214, 214, 214);
+      border-left: 1px solid rgb(214, 214, 214);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .charitiesList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+    ul {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .Contact {
