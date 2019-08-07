@@ -1,24 +1,25 @@
 import React, {Component} from 'react';
+import {HashRouter as Router, Route, Switch} from 'react-router-dom';
 import './App.scss';
-import Header from './Header';
-import StatsInfo from './StatsInfo';
-import FourStepsInfo from './FourStepsInfo';
-import AboutUs from './AboutUs';
-import ChantriesList from './ChantriesList';
-import Contact from './Contact';
+import LandingPage from './LandingPage';
+import LoggedPage from './LoggedUser';
 
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      logged: false
+    }
+  }
   render() {
     return (
-      <React.Fragment>
-        <Header />
-        <StatsInfo />
-        <FourStepsInfo />
-        <AboutUs />
-        <ChantriesList />
-        <Contact />
-      </React.Fragment>
+      <Router>
+        <Switch>
+          <Route exact path='/' component={LandingPage} />
+          <Route path='/give-stuff' render={() => this.state.logged ? <LoggedPage /> : <LandingPage />} />
+        </Switch>
+      </Router>
     )
   }
 }
