@@ -13,31 +13,17 @@ class Contact extends Component {
       messageError: ''
     }
   }
+  handleOnBlur = (name) => (e) => {
+    this.setState({
+      [name]: e.target.value ? '' : 'Zła wartość'
+    })
+  }
+
   handlerChange = event => {
     this.setState( {
       [event.target.name]: event.target.value
     })
   }
-  handleSubmit = event => {
-    event.preventDefault();
-
-    if(this.state.name.length === 0) {
-      this.setState({
-        nameError: "Name cannot be empty!"
-      })
-    }
-
-    if(this.state.email.length === 0 && !this.state.email.includes('@')) {
-      this.setState({
-        emailError: "Email address it is not valid!"
-      })
-    }
-    if(this.state.message.length === 0) {
-      this.setState({
-        messageError: "Message cannot be empty!"
-      })
-    }
-  }  
   render() {
     return (
       <section className={'Contact'}>
@@ -50,13 +36,13 @@ class Contact extends Component {
               <ul>
                 <li>
                   {this.state.nameError ? <p style={{color: 'red'}}>{this.state.nameError}</p> : null}
-                  <input type='text' name='name' value={this.state.name} onChange={this.handlerChange} required placeholder={'Imię'}></input></li>
+                  <input type='text' name='name' value={this.state.name} onBlur={this.handleOnBlur('nameError')} onChange={this.handlerChange} placeholder={'Imię'}></input></li>
                 <li>
                   {this.state.emailError ? <p style={{color: 'red'}}>{this.state.emailError}</p> : null}
-                  <input type='text' name='email' value={this.state.email} onChange={this.handlerChange} required placeholder={'Email'}></input></li>
+                  <input type='text' name='email' value={this.state.email} onBlur={this.handleOnBlur('emailError')} onChange={this.handlerChange} placeholder={'Email'}></input></li>
               </ul>
-              {this.state.messageError ? <p style={{color: 'red'}}>{this.state.emailError}</p> : null}
-              <input className={'message'} type='text' name='message' value={this.state.message} onChange={this.handlerChange} required placeholder={'Wiadomość'}></input>
+              {this.state.messageError ? <p style={{color: 'red'}}>{this.state.messageError}</p> : null}
+              <input className={'message'} type='text' name='message' value={this.state.message} onBlur={this.handleOnBlur('messageError')} onChange={this.handlerChange} required placeholder={'Wiadomość'}></input>
               <input className={'sendButton'} type="submit" value="Wyślij" />
             </form>
           </div>
