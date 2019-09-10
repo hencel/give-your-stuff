@@ -7,12 +7,12 @@ The aim of the project is to create a place where everyone can give unnecessary 
 # Technologies: 
 - React
 - Create React App
-- CSS
+- SASS
 ​
 ​
-#Install:
+# Install:
 ​
-Opisać proces instalacji/uruchomienia projektu
+Just download and run.
 
 
 ## Available Scripts
