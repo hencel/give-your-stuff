@@ -1,13 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # NAZWA_PROJEKTU
 ​
 The aim of the project is to create a place where everyone can give unnecessary things to trusted institutions. 
 ​
 # Technologies: 
-- React
-- Create React App
+- React (Create React App)
+- React Router
 - SASS
+- React Scroll 
 ​
 ​
 # Install:
