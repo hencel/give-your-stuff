@@ -8,6 +8,7 @@ The aim of the project is to create a place where everyone can give unnecessary 
 - React
 - Create React App
 - SASS
+- React Router, React Scroll
 ​
 ​
 # Install:
