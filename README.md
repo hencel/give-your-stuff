@@ -13,8 +13,7 @@ The aim of the project is to create a place where everyone can give unnecessary 
 ​
 # Install:
 ​
-Just download and run.
-
+Download, make npm start and watch the project.
 
 ## Available Scripts
 
