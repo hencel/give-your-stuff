@@ -6,13 +6,11 @@ The aim of the project is to create a place where everyone can give unnecessary 
 - React (Create React App)
 - React Router
 - SASS
-- React Scroll 
-​
+- React Router, React Scroll
 ​
 # Install:
 ​
-Just download and run.
-
+Download, make npm start and watch the project.
 
 ## Available Scripts
 
